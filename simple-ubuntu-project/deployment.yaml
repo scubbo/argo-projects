@@ -4,7 +4,7 @@ metadata:
   name: ubuntu
   namespace: test-webhook
 spec:
-  replicas: 2
+  replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
