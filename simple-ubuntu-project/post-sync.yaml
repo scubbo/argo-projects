@@ -19,4 +19,5 @@ spec:
         - "-d"
         - "'{\"message\":\"From the hook: {{ .app.status.sync.revision }}\"}'"
         - test-webhook.test-webhook.svc.cluster.local
+      restartPolicy: Never
 
