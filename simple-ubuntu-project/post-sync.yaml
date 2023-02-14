@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: post-sync-
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    # argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+      - name: post-sync-job-container
+        image: curlimages/curl
+        command:
+        - "curl"
+        - "-X"
+        - "POST"
+        - "From the hook: {{ .app.status.sync.revision }}"
+
