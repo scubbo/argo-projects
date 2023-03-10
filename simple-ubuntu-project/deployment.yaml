@@ -20,5 +20,5 @@ spec:
         ports:
         - containerPort: 80
         command: [ "/bin/bash", "-c", "--" ]
-        args: [ "while true; do sleep 28; done;" ]
+        args: [ "while true; do sleep 30; done;" ]
 
